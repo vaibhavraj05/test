@@ -43,4 +43,14 @@ jobs:
               dotenv -f .env
               source .env
               echo $API_URL
+              echo $CID
+              echo $REACT_APP_RAZOR_PAY_KEY
+              echo $CURRENCY_SYMBOL
+      
+      - name: echo
+        run : |
+              echo $API_URL
+              echo $CID
+              echo $REACT_APP_RAZOR_PAY_KEY
+              echo $CURRENCY_SYMBOL
           
