@@ -53,6 +53,10 @@ jobs:
       - name: Dotenv Action
         uses: falti/dotenv-action@v1.0.4
       
+      - name: Environment Variables from Dotenv
+        uses: c-py/action-dotenv-to-setenv@v4
+
+      
       - name: echo
         run : |
               echo $API_URL
