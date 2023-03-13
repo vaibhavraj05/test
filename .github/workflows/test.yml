@@ -46,12 +46,6 @@ jobs:
               echo $CID
               echo $REACT_APP_RAZOR_PAY_KEY
               echo $CURRENCY_SYMBOL
-#       - name: Install dotenv
-#         uses: michaeldyrynda/action-dotenv@v2
-#         with:
-#           filename: .env
-      - name: Dotenv Action
-        uses: falti/dotenv-action@v1.0.4
       
       - name: Environment Variables from Dotenv
         uses: c-py/action-dotenv-to-setenv@v4
