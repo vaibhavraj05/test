@@ -41,5 +41,5 @@ jobs:
         run: |
               aws secretsmanager get-secret-value --region ap-south-1 --secret-id mobile-test | jq .SecretString | jq --raw-output . |  jq -r 'to_entries|map("\(.key)=\(.value|tostring)")|.[]' > .env
               dotenv -f .env
-              echo "${API_URL}"
+              cat .env
           
