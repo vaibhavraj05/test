@@ -39,7 +39,7 @@ jobs:
       # Runs a set of commands using the runners shell
       - name: fetching env
         run: |
-              export ${{secrets.AWS_CRED}} aws secretsmanager get-secret-value --region ap-south-1 --secret-id mobile-test | jq .SecretString | jq --raw-output . |  jq -r 'to_entries|map("\(.key)=\(.value|tostring)")|.[]' > .env
+              ${{secrets.AWS_CRED}} aws secretsmanager get-secret-value --region ap-south-1 --secret-id mobile-test | jq .SecretString | jq --raw-output . |  jq -r 'to_entries|map("\(.key)=\(.value|tostring)")|.[]' > .env
               dotenv -f .env
               source .env
               echo $API_URL
