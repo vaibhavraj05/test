@@ -49,6 +49,7 @@ jobs:
       
       - name: echo
         run : |
+              source .env
               echo $API_URL
               echo $CID
               echo $REACT_APP_RAZOR_PAY_KEY
